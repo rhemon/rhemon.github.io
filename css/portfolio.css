@@ -8,7 +8,7 @@
     min-width: 100%;
     position: absolute;
     top: 0;
-    background: #BBDEFB;
+    background: #2196F3;
     padding: 10px;
 }
 .fixed-top a{
@@ -26,7 +26,7 @@
 .info {
     margin: 0;
     border:0;
-    background: #2196F3;
+    background: #BBDEFB;
     padding: 15px;
     color: #FEFEFE;
     font-size: 1.5em;
