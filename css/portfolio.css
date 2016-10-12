@@ -13,7 +13,7 @@
 }
 .fixed-top a{
     text-decoration: none;
-    color: #111;
+    color: #FEFEFE;
     font-weight: bold;
     font-size: 1.5em;
 }
@@ -27,8 +27,9 @@
     margin: 0;
     border:0;
     background: #BBDEFB;
-    padding: 15px;
-    color: #FEFEFE;
+    padding: 15%;
+    color: #111;
+    font-weight: bold;
     font-size: 1.5em;
 }
 .info a {
