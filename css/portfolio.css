@@ -21,9 +21,16 @@
     font-size: 1.6em;
 }
 .body {
-    margin: 50px 0;
+    margin-top: 40px;
 }
-.github {
-    margin: 15px;
-    font-size: 1.25em;
+.info {
+    margin: 0;
+    border:0;
+    background: #2196F3;
+    padding: 15px;
+    color: #FEFEFE;
+    font-size: 1.5em;
+}
+.info a {
+    color: #FEFEFE;
 }
