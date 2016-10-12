@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: monospace;
+}
+.fixed-top {
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    background: #BBDEFB;
+    padding: 10px;
+}
+.fixed-top a{
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.fixed-top a:hover {
+    font-size: 1.6em;
+}
