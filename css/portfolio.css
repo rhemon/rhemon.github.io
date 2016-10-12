@@ -33,7 +33,7 @@
     font-size: 1.75em;
 }
 .info a {
-    color: #FEFEFE;
+    color: #111;
 }
 @media (max-width: 767px){
     .info {
