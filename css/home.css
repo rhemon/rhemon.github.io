@@ -1,15 +1,15 @@
 * {
     background: #BBDEFB;
 }
-h1 {
+#centerBlock {
     min-width: 100%;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.2em;
     position: absolute;;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 35%;
+    -webkit-transform: translateY(-35%);
+    -ms-transform: translateY(-35%);
+    transform: translateY(-35%);
 }
 .skills {
     position: absolute;
