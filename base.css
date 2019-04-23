@@ -25,7 +25,6 @@
 .title-holder{
     line-height: 1px;
     font-size: 12px;
-    text-align: right;
 }
 .title-holder h6{
     line-height: 10px;
@@ -38,31 +37,7 @@
     text-align:center;
     font-size: 15px;
 }
-.skill-item {
-    padding: 10px;
-    border-radius: 15px;
-    background-color: #c0d8d2;
-    color: #232a2b;
-    width: 60px!important;
-    height: 20px;
-    font-size: 15px;
-}
 
-.skill-more:hover {
-    color: #fff;
-    /*border-bottom: 1px dotte d #fff;*/
-}
-.skill-more {
-    /*border-bottom: 1px dotted #c0d8d2;*/
-    color: #c0d8d2;
-    font-size: 13px;
-}
-.skill-more:hover {
-    color: #9ff9e3;
-}
-.skills {
-    text-align: center;
-}
 .name-holder {
         text-align: center;
         color: #c0d8d2;
