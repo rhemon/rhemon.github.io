@@ -95,7 +95,8 @@
     height: 20px;
     /*font-size: 11px;*/
 }
-.footer {
+.footer {;
+    bottom: 0;
     margin:0;
     background-color: #232a2b;
     color: #fff;
@@ -164,4 +165,25 @@
 .custom-container {
     padding: 30px;
     margin: 0px;
+}
+.header {
+    background-color:#232a2b;
+    color:#fff;
+    border-radius: 0;
+    border-top:1px solid #c0d8d2;
+    padding:20px; margin: 0
+}
+
+.project {
+    background-color: #c0d8d2;
+    color: #232a2b;
+    padding: 20px;
+    margin: 20px;
+}
+
+.award {
+    background-color: #232a2b;
+    color: #c0d8d2;
+    padding: 20px;
+    margin: 20px;
 }

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>rhemon</title>
+    <title>rhemon | Home</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,14 +17,14 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-
-        <a class="navbar-brand" href="#"><img src="logo.png"> &nbsp; RHEMON</a>
+        <img src="logo.png">
+        <a class="navbar-brand" href="#">&nbsp; RHEMON</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
+<!--            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Projects</a>
                 </li>
@@ -34,12 +34,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Resume</a>
                 </li>
-            </ul>
-        </div>
-        </div>
+            </ul>-->
+        </div> 
+    </div>
     </nav>
 
-    <header style="background-color:#232a2b; color:#fff; border-radius: 0; border-top:1px solid #c0d8d2; padding:20px; margin: 0">
+    <header class="header">
       <div class="container">
 
         <div class="name-holder">
@@ -49,8 +49,13 @@
         </div>
         <div class="title-holder">
         <!-- <h6>Studying Compsci with Intelligent Systems @ KCL</h6> -->
+        <h5>Currently</h5>
+        <h6>BSc CompSci with Intelligent Systems @ King's College London</h6>
+        <h5>Previous Work</h5>
         <h6>Data Analyst Intern @ Nourish Poultry &amp; Hatchery Ltd.</h6>
         <h6>Chief Technology Officer @ Spark Bangladesh</h6>
+        <h6>ICT Teacher @ Earth House Alternative School</h6>
+        <h6>Web Developer @ Zealcafe</h6>
         <!-- <h6>Lead Developer @ Zultan Bangladesh</h6> -->
         </div>
        <br>
@@ -60,40 +65,180 @@
     </header>
     <main>
     <div class="custom-container">
-    <div class="container">
-    <div class="row">
-    <div class=" col-lg-4">
-    <div class="card col-lg-12">
-    <img class="img-responsive" src="designs/img2.svg"/>
-    <a href="#">
-    <h5>Project Title</h5>
-    <p> Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption
-    Description Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption Description
-    Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption Description </p>
-    <p class="tool">Tools: <span class="tool-item">Python</span> <span class="tool-item">Django</span> <span class="tool-item">Keras</span></p></a>
-    </div>
-    </div>
-    <div class="col-lg-4">
-    <div class="card col-lg-12">
-    <img class="img-responsive" src="designs/img2.svg"/>
-    <a href="#">
-    <h5>Post Title</h5>
-    <p> Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption
-    Description Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption Description
-    Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption Description </p>
-    <p class="tool">Category: <span class="tool-item">AI &amp; ML</span> <span class="tool-item">Python</span> <span class="tool-item">Nourish</span></p></a></div>
-    </div>
-    <div class=" col-lg-4">
-    <div class="card col-lg-12"> <img class="img-responsive" src="designs/img2.svg"/><a href="#">
+        <div class="container">
+            <h1 style="text-align: center;">My Projects <i class="fas fa-layer-group"></i></h1>
+            <div class="row project">
+                <div class="col-lg-4">
+                    <img width="100%" src="media/zultan.png">
+                </div>
+                <div class="col-lg-8">
+                    <h2 style="text-align:center;">Zultan Website</h2>
+                    <h4>Description</h4>
+                    <p>Zultan provides a platform where buyers and sellers connect with each other online. The target is to onboard all local shops of Bangladesh and let the people of Bangladesh explore all shops and markets virtually while staying at home. I was the backend developer of this platform and worked alongside a frontend developer to complete this website.</p>
+                    <p>THe website includes 4 different panels, one for the general customers, one for the vendors/shop owners, one for the partners/agents that take care of delveries and onboard vendors and the last is the admin panel where we can check all transactions and activities.</p>
+                    
+                    <h4>Tools Used</h4>
+                    <p>React, Django, HTML &amp; CSS, Boostrap, JavaScript, Heroku, AWS S3, PrivateEmail, PostgreSQL, Celery, Papertrail</p>
+                    <h4>Problems Faced</h4>
+                    <ul>
+                    <li>Allowing POST requests to Django from React</li>
+                    <li>Two people working on same files resulted to conflicts in work and would make it harder to merge the work.</li>
+                    <li>Heroku refreshes its storage and so media files couldn't be uploaded there.</li>
+                    </ul>
+                    <h4>How did I deal with the problems?</h4>
+                    <p>We used axios to do post and get requests to the django server, and post requests would fail because of csrf token was missing, hence to resolve the issue I used the getCookie function provided in the Django documentation and set that as a default X-CSRFToken header for axios.
+                    To deal with conflicts and to improve the management in our team work we decide keep track of all task by making use of GitHub issues. This way we could track what each other's currently working on and reduce down the chances of causing merge conflicts. For uploading media files, unlike digitalocean we could not use it to store on the server provided by heroku as it would refresh it storages and only keep the files tracked by the git repository, therefore we started to use AWS S3 to store and upload all media files.</p>
+                    <h4>Links</h4>
+                    <p><a href="https://www.zultanbd.com">Live Website</a></p>
+                </div>
+            </div>
 
-    <h5>Project Title</h5>
-    <p> Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption
-    Description Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption Description
-    Descr cript ion Des ion Descr iption Description Descr cript ion Des ion Descr iption Description </p>
-    <p class="tool">Tools: <span class="tool-item">Python</span> <span class="tool-item">Django</span> <span class="tool-item">Keras</span></p></a></div>
+            <div class="row project">
+                <div class="col-lg-4">
+                    <img width="100%" src="media/ink2design.png">
+                </div>
+                <div class="col-lg-8">
+                    <h2 style="text-align:center;">Ink2Design Website</h2>
+                    <h4>Description</h4>
+                    <p>Ink2Design is a printhouse located in London. They provide solution for all your printing needs. I was hired through upwork to develop a simple ecommerce website form them where customers could place orders online and perform their payment, and have admin side where they could check the orders and maintain the products.</p>
+                    <h4>Tools Used</h4>
+                    <p>Django, HTML &amp; CSS, Bootstrap, JavaScript, Stripe, DigitalOcean, PostgreSQL</p>
+                    <h4>Problems Faced</h4>
+                    <p>Each product included a lot of combination and each had a different price, making entry through website difficult.</p>
+                    <h4>How did I deal with the problems?</h4>
+                    <p>Since using the admin panel to entry each product combination, instead making use of a csv file all combinations can be entered automatically. I used numpy and pandas to read the csv file and automatically generate the database from that.</p>
+                    <h4>Links</h4>
+                    <p><a href="rhemon.me">Live Website</a></p>
+                </div>
+            </div>
+
+            <div class="row project">
+                <div class="col-lg-4">
+                    <img width="100%" src="media/spark.png">
+                </div>
+                <div class="col-lg-8">
+                    <h2 style="text-align:center;">Spark Crowdfunding Website</h2>
+                    <h4>Description</h4>
+                    <p>Spark targets to introduce crowdfunding in Bangladesh. I was in charge of their techinical section ensuring that the website gets fully developed. I mainly did the backend development along with other frontend and backend developers.</p>
+                    <h4>Tools Used</h4>
+                    <p>Django, HTML &amp; CSS, Bootstrap, JavaScript, DigitalOcean</p>
+                    <h4>Links</h4>
+                    <p><a href="sparkbd.ml">Live Website</a></p>
+                </div>
+            </div>
+
+            <div class="row project">
+                <div class="col-lg-4">
+                    <img width="100%" src="media/zealcafe.png">
+                </div>
+                <div class="col-lg-8">
+                    <h2 style="text-align:center;">Zealcafe Website</h2>
+                    <h4>Description</h4>
+                    <p>A simple website containing the basic information about the company Zealcafe. I used the parallax design for the website.</p>
+                    <h4>Tools Used</h4>
+                    <p>HTML & CSS, Boostrap, Javascript</p>
+                    <h4>Links</h4>
+                    <p><a href="http://zealcafebd.com/">Live Website</a>(Current one looks different from github code), <a href="https://github.com/rhemon/zealcafe"> GitHub</a></p>
+                </div>
+            </div>
+
+            <div class="row project">
+                <div class="col-lg-4">
+                    <img width="100%" src="media/asa.png">
+                </div>
+                <div class="col-lg-8">
+                    <h2 style="text-align:center;">Aggregate Sieve Analysis App</h2>
+                    <h4>Description</h4>
+                    <p>A simple app used to do a part of aggergate sieve analysis. This was made for my father to help him perform quick checks on the ananlysis work and ensure values were correctly stated in the reports.</p>
+                    <h4>Tools Used</h4>
+                    <p>Java, XML, SqlLite, Android Studio</p>
+                    <h4>Problems Faced</h4>
+                    <p>There were no libraries that would draw the logarithimic graph</p>
+                    <h4>How did I deal with the problems?</h4>
+                    <p>As I couldn't find any existing code that would prepare logarithmic graph, I coded it myself to draw a logarithimic scaled graph on a canvas on top of which the values were plotted.</p>
+                    <h4>Links</h4>
+                    <p><a href="https://play.google.com/store/apps/details?id=io.github.rhemon.aggregatesieveanalysis">Play Store</a>, <a href="https://github.com/rhemon/AggregateSieveAnalysis"> GitHub</a></p>
+                </div>
+            </div>
+
+            <div class="row project">
+                <div class="col-lg-4">
+                    <img width="100%" src="media/gow.png">
+                </div>
+                <div class="col-lg-8">
+                    <h2 style="text-align:center;">Greens on Wheels (School Canteen) App</h2>
+                    <h4>Description</h4>
+                    <p>I developed this app to allow our school students to preorder food from the canteen and then later on collect it from us during the lunch break.</p>
+                    <h4>Tools Used</h4>
+                    <p>Java, XML, SqlLite, Google Spreadsheet API, Google Authentication API, Android Studio</p>
+                    <h4>Problems Faced</h4>
+                    <ul>
+                    <li>How to ensure students from Earth House Alternative School were placing orders?</li>
+                    <li>Database servers would be expensive for us students to manage</li>
+                    </ul>
+                    <h4>How did I deal with the problems?</h4>
+                    <p>Since our school provided each student with a email address, using google's sign in we could ensure students with our school email were only allowed to enter. Secondly to avoid buying and managing databaase servers and all, I instead used the free Google Spreadsheet where we could keep track of all the orders placed and also maintain our stocks and menu for the day.</p>
+                    <h4>Links</h4>
+                    <p><a href="https://github.com/rhemon/GreensOnWheels"> GitHub</a></p>
+                </div>
+            </div>
+
+            <h3 style="text-align:center">and more...</h3>
+
+        </div>
     </div>
-    </div>
-    </div>
+    <div class="custom-container">
+        <div class="container">
+            <h1 style="text-align: center;">My Achievements <i class="fas fa-trophy"></i></h1>
+            <div class="row award">
+                <div class="col-3">
+                <img src="media/bacs.png" width="100%">
+                </div>
+                <div class="col-9">
+                <h3>Fifth Place of Senior Category in BACS High School Programming Contest 2018</h3>
+                <p>BACS High School Programming contest was arranged nationally, where I participated and solved programming problems using C++ and have achieved the fifth position in the contest.</p>
+                </div>
+            </div>
+            <div class="row award">
+                <div class="col-3">
+                <img src="media/bdoi.png" width="100%">
+                </div>
+                <div class="col-9">
+                <h3>10th Place in BDOI 2018</h3>
+                <p>BDOI is the national contest that takes place before selecting the 4 participants for IOI, where I achieved the 10th place. C++ was used to solve the programming problems.</p>
+                </div>
+            </div>
+            <div class="row award">
+                <div class="col-3">
+                <img src="media/sioi.png" width="100%">
+                </div>
+                <div class="col-9">
+                <h3>First Place in Informatics Olympiad</h3>
+                <p>A inter-school informatics olympiad was arranged by Scholastica where I achieved first place. I used Python to solve the programming challenges.</p>
+                </div>
+            </div>
+            <div class="row award">
+                <div class="col-3">
+                <img src="media/gci.png" width="100%">
+                </div>
+                <div class="col-9">
+                <h3>Google Code-in 2016 Finalist</h3>
+                <p>Google Code-in is a contest where you participate with an open source organisation where you contribute to their projects, and the best contributors are awarded at the end of the contest. I was on of the five finalist selected by FOSSASIA in this contest. The tasks I did with them can be found <a href="https://docs.google.com/document/d/19wqjCn8_PIU9R2PRjF-s6qc-QZub6ZEQP6vmuRw0HEo/edit?usp=sharing">here</a>.</p>
+                </div>
+            </div>
+            <div class="row award">
+                <div class="col-3">
+                <img src="media/csaunsw.png" width="100%">
+                </div>
+                <div class="col-9">
+                <h3>Country Topper in Computer Skills Assessment</h3>
+                <p>Our school held an assessment arranged by Macmillan and UNSW Educational Assessment Australia, where in Computer Assessment exam I scored the highest in country and was awared a gold medal by them.</p>
+                </div>
+            </div>
+            
+            <h3 style="text-align:center">and more...</h3>
+
+        </div>
     </div>
     </main>
     <footer class="footer">
