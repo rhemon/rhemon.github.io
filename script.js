@@ -54,6 +54,7 @@ $(document).ready(function () {
 
         $("#" + project_name + "_img").attr("src", "media/" + project_name + "_" + current + ".png")
         count = current + 1
+        total = projects[each_project]["end"] + 1
         $("#" + project_name + "_imgcount").html(count + " of " + total)
         projects[project_name]["current"] = current;
     });
@@ -69,6 +70,7 @@ $(document).ready(function () {
         }
         $("#" + project_name + "_img").attr("src", "media/" + project_name + "_" + current + ".png")
         count = current + 1
+        total = projects[each_project]["end"] + 1
         // total = end + 1
         $("#" + project_name + "_imgcount").html(count + " of " + total)
         projects[project_name]["current"] = current;
