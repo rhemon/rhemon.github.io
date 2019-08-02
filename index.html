@@ -12,6 +12,13 @@
     <link rel="icon" href="logo.ico">
 
     <link rel="stylesheet" href="base.css">
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </head>
 
 <body>
@@ -67,129 +74,314 @@
        </div>
     </header>
     <main>
-    <div class="custom-container">
-        <div class="container" id="projects">
-            <div class="row project">
-                <div class="col-lg-4">
-                    <img width="100%" src="media/zultan.png">
+        <div class="custom-container">
+            <div class="container" id="projects">
+                <div class="project" id="zultan">
+                    <h3 class="row-title">ZULTAN</h3>
+                    <div class="mb-3" style="width:100%; text-align:center">
+                        <img style="margin: auto" width="75%" class="img-responsive" src="media/zultan_0.png" id="zultan_img">
+                    </div>
+                    <div class="container" style="margin-top: auto; margin-bottom: auto;">
+                        <div class="row mb-4">
+                            <div class="col-3" style="text-align:left;margin:auto;">
+                                <button class="imgprev" data-project-name="zultan">&lt;</button>
+                            </div>
+                            <div class="col-6" style="text-align:center;margin: auto;">
+                                <h6 style="margin:auto" id="zultan_imgcount"></h6>
+                            </div>
+                            <div class="col-3" style="text-align:right;margin:auto;">
+                                <button class="imgnext" data-project-name="zultan">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 project-details">
+                                <h5>Links</h5>
+                                <p class="project-links"><a href="https://zultanbd.com">Live Website <i class="fas fa-link"></i></a></p> 
+                                <h5>Project Details</h5>
+                                <p>Zultan provides a platform where buyers and sellers connect with each other online. The target is to onboard all local shops of Bangladesh and let the people of Bangladesh explore all shops and markets virtually while staying at home. I was the backend developer of this platform and worked alongside a frontend developer to complete this website.</p>
+                                <p>THe website includes 4 different panels, one for the general customers, one for the vendors/shop owners, one for the partners/agents that take care of delveries and onboard vendors and the last is the admin panel where we can check all transactions and activities.</p>
+                                
+                                <h5>Tools Used</h5>
+                                <p>React, Django, HTML &amp; CSS, Boostrap, JavaScript, Heroku, AWS S3, PrivateEmail, PostgreSQL, Celery, Papertrail</p>   
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td><strong>Problem Faced</strong></td>
+                                            <td><strong>How I solved it</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Allowing POST requests to Django from React</td>
+                                            <td>Using getCookie function provided in the Django documentation to set default X-CSRFToken header for axios.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Very slow image load for product pictures uploaded by vendors as most have size over 6 MB.</td>
+                                            <td>On upload paste image maintaining the ration on a 480x480 black image and save with 50% quality.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Heroku refreshes its storage and so media files couldn't be uploaded there.</td>
+                                            <td>Save in AWS S3 Bucket</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Two people working on same files resulted to conflicts in work and would make it harder to merge the work.</td>
+                                            <td>Make use of Github Issues to know who is working on what</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-8">
-                    <h2 style="text-align:center;">Zultan Website</h2>
-                    <h4>Description</h4>
-                    <p>Zultan provides a platform where buyers and sellers connect with each other online. The target is to onboard all local shops of Bangladesh and let the people of Bangladesh explore all shops and markets virtually while staying at home. I was the backend developer of this platform and worked alongside a frontend developer to complete this website.</p>
-                    <p>THe website includes 4 different panels, one for the general customers, one for the vendors/shop owners, one for the partners/agents that take care of delveries and onboard vendors and the last is the admin panel where we can check all transactions and activities.</p>
-                    
-                    <h4>Tools Used</h4>
-                    <p>React, Django, HTML &amp; CSS, Boostrap, JavaScript, Heroku, AWS S3, PrivateEmail, PostgreSQL, Celery, Papertrail</p>
-                    <h4>Problems Faced</h4>
-                    <ul>
-                    <li>Allowing POST requests to Django from React</li>
-                    <li>Two people working on same files resulted to conflicts in work and would make it harder to merge the work.</li>
-                    <li>Heroku refreshes its storage and so media files couldn't be uploaded there.</li>
-                    </ul>
-                    <h4>How did I deal with the problems?</h4>
-                    <p>We used axios to do post and get requests to the django server, and post requests would fail because of csrf token was missing, hence to resolve the issue I used the getCookie function provided in the Django documentation and set that as a default X-CSRFToken header for axios.
-                    To deal with conflicts and to improve the management in our team work we decide keep track of all task by making use of GitHub issues. This way we could track what each other's currently working on and reduce down the chances of causing merge conflicts. For uploading media files, unlike digitalocean we could not use it to store on the server provided by heroku as it would refresh it storages and only keep the files tracked by the git repository, therefore we started to use AWS S3 to store and upload all media files.</p>
-                    <h4>Links</h4>
-                    <p><a href="https://www.zultanbd.com">Live Website</a></p>
+
+                <div class="project" id="ink2design">
+                    <h3 class="row-title">Ink2Design</h3>
+                    <div class="mb-3" style="width:100%; text-align:center">
+                        <img style="margin: auto" width="75%" class="img-responsive" src="media/ink2design_0.png" id="ink2design_img">
+                    </div>
+                    <div class="container" style="margin-top: auto; margin-bottom: auto;">
+                        <div class="row mb-4">
+                            <div class="col-3" style="text-align:left;margin:auto;">
+                                <button class="imgprev" data-project-name="ink2design">&lt;</button>
+                            </div>
+                            <div class="col-6" style="text-align:center;margin: auto;">
+                                <h6 style="margin:auto" id="ink2design_imgcount"></h6>
+                            </div>
+                            <div class="col-3" style="text-align:right;margin:auto;">
+                                <button class="imgnext" data-project-name="ink2design">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 project-details">
+                                <h5>Links</h5>
+                                <p class="project-links"><a href="http://rhemon.me">Live Website <i class="fas fa-link"></i></a></p> 
+                                <h5>Project Details</h5>
+                                <p>Ink2Design is a printhouse located in London. They provide solution for all your printing needs. I was hired through upwork to develop a simple ecommerce website form them where customers could place orders online and perform their payment, and have admin side where they could check the orders and maintain the products.</p>
+                                <h5>Tools Used</h5>
+                                <p>Django, HTML &amp; CSS, Bootstrap, JavaScript, Stripe, DigitalOcean, PostgreSQL</p>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td><strong>Problem Faced</strong></td>
+                                            <td><strong>How I solved it</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Many variable combination of a product, manual entry would be lengthy</td>
+                                            <td>Making use of numpy to read a csv file that would automatically generate the combination of product and do the entry. So client just needs to upload csv file</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="project" id="spark">
+                    <h3 class="row-title">Spark Crowdfunding</h3>
+                    <div class="mb-3" style="width:100%; text-align:center">
+                        <img style="margin: auto" width="75%" class="img-responsive" src="media/spark_0.png" id="spark_img">
+                    </div>
+                    <div class="container" style="margin-top: auto; margin-bottom: auto;">
+                        <div class="row mb-4">
+                            <div class="col-3" style="text-align:left;margin:auto;">
+                                <button class="imgprev" data-project-name="spark">&lt;</button>
+                            </div>
+                            <div class="col-6" style="text-align:center;margin: auto;">
+                                <h6 style="margin:auto" id="spark_imgcount"></h6>
+                            </div>
+                            <div class="col-3" style="text-align:right;margin:auto;">
+                                <button class="imgnext" data-project-name="spark">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 project-details">
+                                <h5>Links</h5>
+                                <p class="project-links"><a href="https://sparkbd.ml">Live Website <i class="fas fa-link"></i></a></p> 
+                                <h5>Project Details</h5>
+                                <p>Spark targets to introduce crowdfunding in Bangladesh. I was in charge of their techinical section ensuring that the website gets fully developed. I mainly did the backend development along with other frontend and backend developers.</p>
+                                <h5>Tools Used</h5>
+                                <p>Django, HTML & CSS, Bootstrap, JavaScript, DigitalOcean</p>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td><strong>Problem Faced</strong></td>
+                                            <td><strong>How I solved it</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Different User Types - Creators, Backers, Admins, Authors</td>
+                                            <td>Instead of having variuos user object as it is considered bad practice, having one user object and then having a model for each type of user that link to the user object.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project" id="zealcafe">
+                    <h3 class="row-title">ZEALCAFE</h3>
+                    <div class="mb-3" style="width:100%; text-align:center">
+                        <img style="margin: auto" width="75%" class="img-responsive" src="media/zealcafe_0.png" id="zealcafe_img">
+                    </div>
+                    <div class="container" style="margin-top: auto; margin-bottom: auto;">
+                        <div class="row mb-4">
+                            <div class="col-3" style="text-align:left;margin:auto;">
+                                <button class="imgprev" data-project-name="zealcafe">&lt;</button>
+                            </div>
+                            <div class="col-6" style="text-align:center;margin: auto;">
+                                <h6 style="margin:auto" id="zealcafe_imgcount"></h6>
+                            </div>
+                            <div class="col-3" style="text-align:right;margin:auto;">
+                                <button class="imgnext" data-project-name="zealcafe">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 project-details">
+                                <h5>Links</h5>
+                                <p class="project-links"><a href="https://github.com/rhemon/zealcafe">GitHub <i class="fas fa-link"></i></a> &nbsp; <a href="https://rhemon.github.io/zealcafe">Live Website <i class="fas fa-link"></i></a> </p> 
+                                <h5>Project Details</h5>
+                                <p>A simple website containing the basic information about the company Zealcafe. I used the parallax design for the website.</p>
+                                <h5>Tools Used</h5>
+                                <p>HTML & CSS, Bootstrap, JavaScript</p>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td><strong>Problem Faced</strong></td>
+                                            <td><strong>How I solved it</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Making headline adjust on background image</td>
+                                            <td>Giving background image a slight blur allowed the words on top more focused.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Client did not want extra cost for privatemail yet wanted a way for contact</td>
+                                            <td>Used Google Forms and embedded it at the Contact Us section. However this was not a good fit for the design.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project" id="asa">
+                    <h3 class="row-title">Aggregate Sieve Analysis App</h3>
+                    <div class="mb-3" style="width:100%; text-align:center">
+                        <img style="margin: auto" width="50%" class="img-responsive" src="media/asa_0.png" id="asa_img">
+                    </div>
+                    <div class="container" style="margin-top: auto; margin-bottom: auto;">
+                        <div class="row mb-4">
+                            <div class="col-3" style="text-align:left;margin:auto;">
+                                <button class="imgprev" data-project-name="asa">&lt;</button>
+                            </div>
+                            <div class="col-6" style="text-align:center;margin: auto;">
+                                <h6 style="margin:auto" id="asa_imgcount"></h6>
+                            </div>
+                            <div class="col-3" style="text-align:right;margin:auto;">
+                                <button class="imgnext" data-project-name="asa">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 project-details">
+                                <h5>Links</h5>
+                                <p class="project-links"><a href="https://github.com/rhemon/AggregateSieveAnalysis">GitHub <i class="fas fa-link"></i></a> &nbsp; <a href="https://play.google.com/store/apps/details?id=io.github.rhemon.aggregatesieveanalysis">Play Store <i class="fas fa-link"></i></a> </p> 
+                                <h5>Project Details</h5>
+                                <p>Takes measured values from different sieves and performs a part of aggregate sieve analysis. It draws out a logarithmic scaled graph and performs calculation to determine values that assess properties and quality of aggregate. Was developed to help client make quick assessments on the calculations made in their reports.</p>
+                                <h5>Tools Used</h5>
+                                <p>Java, XML, SQLite, Android Studio</p>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td><strong>Problem Faced</strong></td>
+                                            <td><strong>How I solved it</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>No particular library found for drawing logarithmic scaled graph</td>
+                                            <td>Made custom library that draws the graph on canvas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Some reports often needs to be revisited</td>
+                                            <td>Using SQLite to save the data on local storage.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project" id="gow">
+                    <h3 class="row-title">Greens on Wheels - School Canteen App</h3>
+                    <div class="mb-3" style="width:100%; text-align:center">
+                        <img style="margin: auto" width="50%" class="img-responsive" src="media/gow_0.png" id="gow_img">
+                    </div>
+                    <div class="container" style="margin-top: auto; margin-bottom: auto;">
+                        <div class="row mb-4">
+                            <div class="col-3" style="text-align:left;margin:auto;">
+                                <button class="imgprev" data-project-name="gow">&lt;</button>
+                            </div>
+                            <div class="col-6" style="text-align:center;margin: auto;">
+                                <h6 style="margin:auto" id="gow_imgcount"></h6>
+                            </div>
+                            <div class="col-3" style="text-align:right;margin:auto;">
+                                <button class="imgnext" data-project-name="gow">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 project-details">
+                                <h5>Links</h5>
+                                <p class="project-links"><a href="https://github.com/rhemon/GreensOnWheels">GitHub <i class="fas fa-link"></i></a></p> 
+                                <h5>Project Details</h5>
+                                <p>While being the Information and Technology Specialist at our school canteen Greens on Wheels, I developed a simple android application that was shared with the students so that they could pre-order their food and save time during the break periods. This would help us prepare the right amount of food before the break period and allow us studnets to have enough time to finish our food and have a proper meal.</p>
+                                <h5>Tools Used</h5>
+                                <p>Java, XML, Google Spreadsheet API, Google Authentication API, Android Studio</p>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td><strong>Problem Faced</strong></td>
+                                            <td><strong>How I solved it</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Preventing prank orders and ensuring only students place orders</td>
+                                            <td>To make sure only students order, I used Google Authentication API to check if user has the school email, if so he is allowed to place order. And by making them sign in it allows us to know who placed the order and so prevents students from pranking.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Database and servers would be expensive for us students to manage</td>
+                                            <td>To manage the stock and orders of the canteen it would be difficult to manage database and server as it was managed by us students. Therefore I used Google Spreadsheet to save and manage the orders and stock.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="row-title">and more...</h3>
+
             </div>
-
-            <div class="row project">
-                <div class="col-lg-4">
-                    <img width="100%" src="media/ink2design.png">
-                </div>
-                <div class="col-lg-8">
-                    <h2 style="text-align:center;">Ink2Design Website</h2>
-                    <h4>Description</h4>
-                    <p>Ink2Design is a printhouse located in London. They provide solution for all your printing needs. I was hired through upwork to develop a simple ecommerce website form them where customers could place orders online and perform their payment, and have admin side where they could check the orders and maintain the products.</p>
-                    <h4>Tools Used</h4>
-                    <p>Django, HTML &amp; CSS, Bootstrap, JavaScript, Stripe, DigitalOcean, PostgreSQL</p>
-                    <h4>Problems Faced</h4>
-                    <p>Each product included a lot of combination and each had a different price, making entry through website difficult.</p>
-                    <h4>How did I deal with the problems?</h4>
-                    <p>Since using the admin panel to entry each product combination, instead making use of a csv file all combinations can be entered automatically. I used numpy and pandas to read the csv file and automatically generate the database from that.</p>
-                    <h4>Links</h4>
-                    <p><a href="rhemon.me">Live Website</a></p>
-                </div>
-            </div>
-
-            <div class="row project">
-                <div class="col-lg-4">
-                    <img width="100%" src="media/spark.png">
-                </div>
-                <div class="col-lg-8">
-                    <h2 style="text-align:center;">Spark Crowdfunding Website</h2>
-                    <h4>Description</h4>
-                    <p>Spark targets to introduce crowdfunding in Bangladesh. I was in charge of their techinical section ensuring that the website gets fully developed. I mainly did the backend development along with other frontend and backend developers.</p>
-                    <h4>Tools Used</h4>
-                    <p>Django, HTML &amp; CSS, Bootstrap, JavaScript, DigitalOcean</p>
-                    <h4>Links</h4>
-                    <p><a href="sparkbd.ml">Live Website</a></p>
-                </div>
-            </div>
-
-            <div class="row project">
-                <div class="col-lg-4">
-                    <img width="100%" src="media/zealcafe.png">
-                </div>
-                <div class="col-lg-8">
-                    <h2 style="text-align:center;">Zealcafe Website</h2>
-                    <h4>Description</h4>
-                    <p>A simple website containing the basic information about the company Zealcafe. I used the parallax design for the website.</p>
-                    <h4>Tools Used</h4>
-                    <p>HTML & CSS, Boostrap, Javascript</p>
-                    <h4>Links</h4>
-                    <p><a href="http://zealcafebd.com/">Live Website</a>(Current one looks different from github code), <a href="https://github.com/rhemon/zealcafe"> GitHub</a></p>
-                </div>
-            </div>
-
-            <div class="row project">
-                <div class="col-lg-4">
-                    <img width="100%" src="media/asa.png">
-                </div>
-                <div class="col-lg-8">
-                    <h2 style="text-align:center;">Aggregate Sieve Analysis App</h2>
-                    <h4>Description</h4>
-                    <p>A simple app used to do a part of aggergate sieve analysis. This was made for my father to help him perform quick checks on the ananlysis work and ensure values were correctly stated in the reports.</p>
-                    <h4>Tools Used</h4>
-                    <p>Java, XML, SqlLite, Android Studio</p>
-                    <h4>Problems Faced</h4>
-                    <p>There were no libraries that would draw the logarithimic graph</p>
-                    <h4>How did I deal with the problems?</h4>
-                    <p>As I couldn't find any existing code that would prepare logarithmic graph, I coded it myself to draw a logarithimic scaled graph on a canvas on top of which the values were plotted.</p>
-                    <h4>Links</h4>
-                    <p><a href="https://play.google.com/store/apps/details?id=io.github.rhemon.aggregatesieveanalysis">Play Store</a>, <a href="https://github.com/rhemon/AggregateSieveAnalysis"> GitHub</a></p>
-                </div>
-            </div>
-
-            <div class="row project">
-                <div class="col-lg-4">
-                    <img width="100%" src="media/gow.png">
-                </div>
-                <div class="col-lg-8">
-                    <h2 style="text-align:center;">Greens on Wheels (School Canteen) App</h2>
-                    <h4>Description</h4>
-                    <p>I developed this app to allow our school students to preorder food from the canteen and then later on collect it from us during the lunch break.</p>
-                    <h4>Tools Used</h4>
-                    <p>Java, XML, SqlLite, Google Spreadsheet API, Google Authentication API, Android Studio</p>
-                    <h4>Problems Faced</h4>
-                    <ul>
-                    <li>How to ensure students from Earth House Alternative School were placing orders?</li>
-                    <li>Database servers would be expensive for us students to manage</li>
-                    </ul>
-                    <h4>How did I deal with the problems?</h4>
-                    <p>Since our school provided each student with a email address, using google's sign in we could ensure students with our school email were only allowed to enter. Secondly to avoid buying and managing databaase servers and all, I instead used the free Google Spreadsheet where we could keep track of all the orders placed and also maintain our stocks and menu for the day.</p>
-                    <h4>Links</h4>
-                    <p><a href="https://github.com/rhemon/GreensOnWheels"> GitHub</a></p>
-                </div>
-            </div>
-
-            <h3 style="text-align:center">and more...</h3>
-
         </div>
-    </div>
-   
     </main>
     <footer class="footer">
     <div class="container">
@@ -203,10 +395,7 @@
     </div>
     </div>
     </footer>
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
