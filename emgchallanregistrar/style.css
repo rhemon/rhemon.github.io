@@ -1,0 +1,405 @@
+:root {
+    --bg: #f5f0e8;
+    --surface: rgba(255, 255, 255, 0.82);
+    --surface-strong: #ffffff;
+    --ink: #13211f;
+    --muted: #52615b;
+    --accent: #0f7a67;
+    --accent-dark: #0b4f43;
+    --warm: #cf8f43;
+    --line: rgba(19, 33, 31, 0.12);
+    --shadow: 0 24px 60px rgba(19, 33, 31, 0.12);
+    --radius-lg: 28px;
+    --radius-md: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Source Sans 3", sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(15, 122, 103, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(207, 143, 67, 0.14), transparent 24%),
+        linear-gradient(180deg, #fbf8f2 0%, var(--bg) 100%);
+}
+
+a {
+    color: inherit;
+}
+
+.page-shell {
+    min-height: 100vh;
+}
+
+.hero,
+.content {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 24px 0 28px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.home-link,
+.github-link,
+.text-link {
+    text-decoration: none;
+    color: var(--accent-dark);
+    font-weight: 700;
+}
+
+.github-link,
+.text-link {
+    border-bottom: 1px solid transparent;
+}
+
+.github-link:hover,
+.text-link:hover {
+    border-color: currentColor;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.8fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.hero-copy,
+.hero-card,
+.download-panel,
+.history-panel,
+.info-card {
+    background: var(--surface);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: var(--shadow);
+}
+
+.hero-copy {
+    padding: 44px;
+    border-radius: 36px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-copy::after {
+    content: "";
+    position: absolute;
+    inset: auto -40px -50px auto;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(15, 122, 103, 0.18), transparent 68%);
+}
+
+.eyebrow,
+.section-kicker,
+.card-label {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin: 0 0 12px;
+}
+
+.hero-logo {
+    width: min(380px, 100%);
+    display: block;
+    margin-bottom: 18px;
+}
+
+.hero-copy h1 {
+    margin: 0 0 16px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4.4rem);
+    line-height: 0.98;
+    max-width: 12ch;
+}
+
+.hero-text,
+.panel-copy,
+.card-note,
+.download-details p,
+.info-card p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.55;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 28px 0 20px;
+}
+
+.primary-button,
+.secondary-button {
+    border-radius: 999px;
+    padding: 15px 22px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-button {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent) 0%, #0d5e51 100%);
+    box-shadow: 0 16px 32px rgba(15, 122, 103, 0.22);
+}
+
+.secondary-button {
+    color: var(--accent-dark);
+    background: rgba(15, 122, 103, 0.08);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+.wide {
+    width: 100%;
+}
+
+.release-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pill,
+.download-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: rgba(19, 33, 31, 0.06);
+    color: var(--accent-dark);
+    font-weight: 700;
+}
+
+.hero-card {
+    border-radius: 28px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.latest-card-header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.hero-icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: var(--surface-strong);
+    object-fit: contain;
+    padding: 9px;
+    box-shadow: inset 0 0 0 1px rgba(19, 33, 31, 0.08);
+}
+
+.hero-card h2,
+.download-panel h2,
+.history-panel h2 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.6rem, 2vw, 2.2rem);
+}
+
+.latest-meta {
+    display: grid;
+    gap: 16px;
+    margin: 28px 0 18px;
+}
+
+.latest-meta div {
+    padding: 16px 18px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--line);
+}
+
+.latest-meta dt {
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+}
+
+.latest-meta dd {
+    margin: 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+.content {
+    padding-bottom: 60px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.info-card,
+.download-panel,
+.history-panel {
+    border-radius: var(--radius-lg);
+}
+
+.info-card {
+    padding: 26px;
+}
+
+.info-card h3 {
+    margin-top: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.3rem;
+}
+
+.download-panel,
+.history-panel {
+    padding: 30px;
+    margin-top: 18px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.download-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
+    gap: 24px;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.download-facts {
+    margin: 18px 0 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+.download-facts li + li {
+    margin-top: 8px;
+}
+
+.download-actions {
+    display: grid;
+    gap: 12px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 18px;
+}
+
+.release-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+}
+
+.release-table th,
+.release-table td {
+    padding: 16px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+}
+
+.release-table th {
+    font-size: 0.84rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+}
+
+.release-table td strong {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.download-link {
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 980px) {
+    .hero-content,
+    .download-layout,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero,
+    .content {
+        width: min(100% - 20px, 1180px);
+    }
+
+    .topbar,
+    .panel-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-copy h1 {
+        max-width: none;
+    }
+
+    .hero-card,
+    .download-panel,
+    .history-panel,
+    .info-card {
+        padding: 22px;
+    }
+
+    .release-table {
+        min-width: 620px;
+    }
+}
