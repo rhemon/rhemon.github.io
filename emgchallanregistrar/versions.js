@@ -1,6 +1,15 @@
 const releaseManifest = {
-  latest: "0.1.0",
+  latest: "0.2.0",
   releases: [
+    {
+      version: "0.2.0",
+      date: "12 Apr 2026",
+      fileName: "EMGChallanRegistrarSetup.exe",
+      sizeLabel: "11.7 MB",
+      downloadUrl: "downloads/v0.2.0/EMGChallanRegistrarSetup.exe",
+      notesUrl: "https://github.com/rhemon/emg_challan_registrar/releases/tag/v0.2.0",
+      notesSummary: "Data-entry focused release with supplier and receiver split, estimate and survey quantity paths, richer segmented quantity entry, and restored breakdown overrides."
+    },
     {
       version: "0.1.0",
       date: "15 Mar 2026",
