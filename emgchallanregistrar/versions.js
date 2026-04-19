@@ -1,6 +1,15 @@
 const releaseManifest = {
-  latest: "0.2.0",
+  latest: "0.3.0",
   releases: [
+    {
+      version: "0.3.0",
+      date: "19 Apr 2026",
+      fileName: "EMGChallanRegistrarSetup.exe",
+      sizeLabel: "11.7 MB",
+      downloadUrl: "downloads/v0.3.0/EMGChallanRegistrarSetup.exe",
+      notesUrl: "https://github.com/rhemon/emg_challan_registrar/releases/tag/v0.3.0",
+      notesSummary: "Data-entry and report alignment release with independent CFT/Ton quantities, separate CFT/Ton rates, per-field breakdown units, and supplier/receiver report filters."
+    },
     {
       version: "0.2.0",
       date: "12 Apr 2026",
