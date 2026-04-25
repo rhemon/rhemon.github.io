@@ -1,6 +1,15 @@
 const releaseManifest = {
-  latest: "0.3.0",
+  latest: "0.4.0",
   releases: [
+    {
+      version: "0.4.0",
+      date: "25 Apr 2026",
+      fileName: "EMGChallanRegistrarSetup.exe",
+      sizeLabel: "11.7 MB",
+      downloadUrl: "downloads/v0.4.0/EMGChallanRegistrarSetup.exe",
+      notesUrl: "https://github.com/rhemon/emg_challan_registrar/releases/tag/v0.4.0",
+      notesSummary: "Billing-status workflow release with billed and unbilled entry state, bulk billing actions, billed filtering in Entries and Reports, and billed status report columns."
+    },
     {
       version: "0.3.0",
       date: "19 Apr 2026",
