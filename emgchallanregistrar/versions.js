@@ -1,6 +1,15 @@
 const releaseManifest = {
-  latest: "0.4.0",
+  latest: "0.5.0",
   releases: [
+    {
+      version: "0.5.0",
+      date: "02 May 2026",
+      fileName: "EMGChallanRegistrarSetup.exe",
+      sizeLabel: "11.8 MB",
+      downloadUrl: "downloads/v0.5.0/EMGChallanRegistrarSetup.exe",
+      notesUrl: "https://github.com/rhemon/emg_challan_registrar/releases/tag/v0.5.0",
+      notesSummary: "Reporting, quantity-validation, and filtering release with per-group quantity checks, richer entry and report filters, remembered breakdown units, improved edit flow, and cleaner report exports."
+    },
     {
       version: "0.4.0",
       date: "25 Apr 2026",
