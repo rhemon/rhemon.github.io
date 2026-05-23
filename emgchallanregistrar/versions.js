@@ -1,7 +1,15 @@
 const releaseManifest = {
-  latest: "0.6.0",
+  latest: "0.6.1",
   releases: [
-        {
+            {
+      version: "0.6.1",
+      date: "23 May 2026",
+      fileName: "EMGChallanRegistrarSetup.exe",
+      sizeLabel: "11.7 MB",
+      downloadUrl: "downloads/v0.6.1/EMGChallanRegistrarSetup.exe",
+      notesUrl: "https://github.com/rhemon/emg_challan_registrar/releases/tag/v0.6.1",
+      notesSummary: "Patch release with EMG-based billed and unbilled overview totals, a new EMG Vessel Entries filter, and more reliable preset dropdown selection behavior."
+    },{
       version: "0.6.0",
       date: "23 May 2026",
       fileName: "EMGChallanRegistrarSetup.exe",
@@ -125,4 +133,5 @@ function renderReleaseHistory() {
 
 applyLatestRelease(getLatestRelease());
 renderReleaseHistory();
+
 
