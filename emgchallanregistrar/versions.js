@@ -1,7 +1,15 @@
 const releaseManifest = {
-  latest: "0.5.1",
+  latest: "0.6.0",
   releases: [
-    {
+        {
+      version: "0.6.0",
+      date: "23 May 2026",
+      fileName: "EMGChallanRegistrarSetup.exe",
+      sizeLabel: "11.7 MB",
+      downloadUrl: "downloads/v0.6.0/EMGChallanRegistrarSetup.exe",
+      notesUrl: "https://github.com/rhemon/emg_challan_registrar/releases/tag/v0.6.0",
+      notesSummary: "Preset suggestions and billed-overview release with inline preset matching, latest challan per innex, billed and unbilled totals, party breakdowns, and innex trip counts."
+    },{
       version: "0.5.1",
       date: "02 May 2026",
       fileName: "EMGChallanRegistrarSetup.exe",
@@ -117,3 +125,4 @@ function renderReleaseHistory() {
 
 applyLatestRelease(getLatestRelease());
 renderReleaseHistory();
+
