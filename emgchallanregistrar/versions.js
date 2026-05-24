@@ -1,6 +1,15 @@
 const releaseManifest = {
-  latest: "0.6.2",
+  latest: "0.6.3",
   releases: [
+    {
+      version: "0.6.3",
+      date: "24 May 2026",
+      fileName: "EMGChallanRegistrarSetup.exe",
+      sizeLabel: "11.8 MB",
+      downloadUrl: "downloads/v0.6.3/EMGChallanRegistrarSetup.exe",
+      notesUrl: "https://github.com/rhemon/emg_challan_registrar/releases/tag/v0.6.3",
+      notesSummary: "Patch release with billed-state-safe editing, combined party filter matching, broader amount fallback across charge displays, and safer local database seeding and mirroring."
+    },
                 {
       version: "0.6.2",
       date: "23 May 2026",
@@ -141,6 +150,7 @@ function renderReleaseHistory() {
 
 applyLatestRelease(getLatestRelease());
 renderReleaseHistory();
+
 
 
 
